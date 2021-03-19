@@ -74,11 +74,11 @@ function CreateItem() {
 }
 
 function DeleteItem() {
-    CreatedDateArray.pop(CurrentIndex);
-    DescriptionArray.pop(CurrentIndex);
-    TitleArray.pop(CurrentIndex);
-    ValueArray.pop(CurrentIndex);
-    TypeArray.pop(CurrentIndex);
+    CreatedDateArray.splice(CurrentIndex, 1);
+    DescriptionArray.splice(CurrentIndex, 1);
+    TitleArray.splice(CurrentIndex, 1);
+    ValueArray.splice(CurrentIndex, 1);
+    TypeArray.splice(CurrentIndex, 1);
     SwitchToPane(ListWindow);
 }
 
@@ -151,7 +151,6 @@ function RefreshList() {
         if (TypeArray[i] == 0) sum -= parseFloat(ValueArray[i]);
         else sum += parseFloat(ValueArray[i]);
     }
-    console.log(sum);
     BalanceMeter.innerText = sum;
     if (BalanceMeter.innerText.charAt(0) == '-') BalanceMeter.className = "expense";
     else BalanceMeter.className = "positive";
