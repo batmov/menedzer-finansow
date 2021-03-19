@@ -33,6 +33,7 @@ let Months = [
 ]
 
 function Main() {
+    if (getCookie("title-array") == null) SaveToCookies();
     LoadFromCookies();
     SwitchToPane(ListWindow);
 }
