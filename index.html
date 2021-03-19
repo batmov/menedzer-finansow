@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menedżer Finansów \ batmov</title>
+</head>
+<body>
+    <center>
+        <div class="balance-meter">
+            <span id="balance-meter">100</span>
+            <span id="currency">zł</span>
+        </div>
+    </center>
+
+    <br><br>
+
+    <div class="window" id="list-window">
+        <center id="list-window-buttons">
+            <button onclick="CreateItem();">
+                <img src="media/add-24px.svg">
+                <span>Utwórz wydatek lub przychód</span>
+            </button>
+        </center>
+
+        <br><br>
+
+        <div id="list">
+            <div onclick="EditItem();" class="item">
+                <p class="title">Wartość 001</p>
+                <p class="desc">Opis 001</p>
+                <p class="value expense">-100 000 000 €</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="window" id="edit-window">
+        <center id="edit-window-buttons">
+            <button onclick="SwitchToPane(ListWindow);">
+                <img src="media/arrow_back-24px.svg">
+                <span>Anuluj</span>
+            </button>
+            <button onclick="SaveItem();">
+                <img src="media/done-24px.svg">
+                <span>Zapisz</span>
+            </button>
+            <button onclick="EndCreateItem();">
+                <img src="media/add-24px.svg">
+                <span>Utwórz</span>
+            </button>
+            <button onclick="DeleteItem();">
+                <img src="media/remove-24px.svg">
+                <span>Usuń</span>
+            </button>
+        </center>
+
+        <br><br>
+
+        <input placeholder="Tytuł" id="edit-item-title" class="item-title" type="text" value="Nowe źródło">
+        <br><br>
+        <textarea placeholder="Opis" id="edit-item-desc" class="item-description"></textarea>
+        <br><br>
+        <input name="type-of-item" id="income" type="radio">
+        <label for="income">Przychód</label>
+        <input name="type-of-item" id="expense" type="radio">
+        <label for="expense">Wydatek</label>
+        <br><br>
+        <input placeholder="Wartość" id="edit-item-value" type="number" value="0">
+    </div>
+
+    <div class="window" id="settings-window">
+        <center id="edit-window-buttons">
+            <button onclick="SwitchToPane(ListWindow);">
+                <img src="media/arrow_back-24px.svg">
+                <span>Anuluj</span>
+            </button>
+            <button onclick="SaveItem();">
+                <img src="media/done-24px.svg">
+                <span>Zapisz</span>
+            </button>
+        </center>
+    </div>
+</body>
+<script src="script.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</html>

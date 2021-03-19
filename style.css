@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@keyframes appear {
+    from{
+        transform: translateY(10px);
+        opacity: 0%;
+    }
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.balance-meter {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 40px;
+    padding: 74px 0;
+    color: rgb(68, 68, 68);
+    box-sizing: border-box;
+}
+.balance-meter:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.window {
+    width: 800px;
+    margin: auto;
+    animation: appear;
+    animation-duration: 0.5s;
+}
+
+#balance-meter {
+    font-weight:700;
+}
+
+button > img {
+    margin-right: 5px;
+}
+button > span{
+    float:right;
+    margin-top:3px;
+    margin-right: 6px;
+}
+button {
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    padding:4px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    opacity:100%;
+}
+button:hover {
+    opacity:70%;
+}
+button+button{
+    margin-left: 10px;
+}
+
+label {
+    display:inline-block;
+    width:370px;
+}
+
+textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    padding:10px;
+    width:100%;
+    max-width: 790px;
+}
+
+input[type=text], input[type=number] {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    padding:10px;
+    max-width: 790px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+.item {
+    position: relative;
+    padding:5px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-bottom:20px;
+}
+.item:hover{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.item > .title {
+    font-weight: 700;
+}
+.item > .value {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    font-size:20px;
+}
+
+.expense {
+    color:rgb(175, 12, 12);
+}
+.income {
+    color:rgb(28, 133, 14);
+}
+.positive {
+    color: rgb(31, 83, 150);
+}
+
+.item-title {
+    width: 100%;
+    font-size: 26px !important;
+}
+.item-description {
+    height:100px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+.timestamp {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 100;
+}
